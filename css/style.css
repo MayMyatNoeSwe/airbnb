@@ -371,11 +371,18 @@ p.list-title {
 .service-info h4 {
   font-size: 24px;
   font-weight: 500;
-  padding-bottom: 25px;
+}
+.service-info .service-img {
+  width: 30%;
+
+  display: block;
 }
 .service-info img {
-  border-radius: 10px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 10px;
+  /* background: #000; */
 }
 .service-info img + p {
   font-weight: bold;
@@ -651,6 +658,18 @@ img:hover {
     margin: auto;
     flex-grow: 0;
   }
+  .service-info .service-img {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+  }
+  .service-info img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    /* background: #000; */
+  }
   .contact-info div {
     flex: 1 1 30%;
     margin: 0 90px;
@@ -742,9 +761,11 @@ img:hover {
     margin: auto;
   }
   .service-info img {
-    width: 92%;
-    display: block;
+    max-width: 100%;
     margin: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
   }
   .service-location .img {
     height: auto;
@@ -803,6 +824,21 @@ img:hover {
   }
   .service-hightlight {
     margin: 0px 30px;
+  }
+  .about-user div {
+    margin-bottom: 30px;
+  }
+  .service-info .service-img {
+    width: 99%;
+    margin: 20px auto;
+    display: block;
+  }
+  .service-info img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    /* background: #000; */
   }
   .service-icon {
     text-align: center;
