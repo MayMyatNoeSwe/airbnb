@@ -100,11 +100,10 @@ nav div {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
   width: 90%;
   margin: auto;
-  gap: 5px;
 }
 
 .div1 {
@@ -198,8 +197,8 @@ button:hover {
   margin-right: 30px;
 }
 .about-user div:first-child img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   border-radius: 50%;
   object-fit: cover;
 }
@@ -310,21 +309,23 @@ p.list-title {
 }
 .user-menu h4 {
   padding: 15px 0;
-  font-size: 27px;
+  font-size: 25px;
   font-family: Roboto;
   font-weight: 500;
 }
 .user-box {
-  /* border: 1px solid var(--gray-color); */
-  width: 40%;
+  width: 42%;
   display: block;
   text-align: center;
-  padding: 25px;
+  padding: 15px;
   box-shadow: 0 0 8px 1px var(--gray-color);
   border-radius: 10px;
 }
+.user-box:hover {
+  box-shadow: 0 0 25px 1px var(--gray-color);
+}
 .user-box h3 {
-  font-size: 35px;
+  font-size: 30px;
 }
 .user-box p {
   font-weight: bold;
@@ -336,7 +337,7 @@ p.list-title {
 }
 .user-info-container {
   padding: 0 70px;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 .user-info {
   display: flex;
@@ -348,7 +349,7 @@ p.list-title {
 .user-info i {
   font-size: 25px;
   width: 50px;
-  margin-right: 15px;
+  padding-right: 15px;
 }
 .user-greeting p {
   margin: 0 70px;
@@ -492,7 +493,7 @@ p.list-title {
 .contact > h4 {
   font-size: 26px;
   font-weight: normal;
-  padding: 10px 0;
+  padding: 40px 0 10px 0;
   font-family: Roboto;
   margin-left: 60px;
 }
@@ -500,12 +501,15 @@ p.list-title {
 .contact-info {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
+  /* padding-top: 50px; */
   padding-bottom: 50px;
   border-bottom: 1px solid var(--gray-color);
 }
 .contact-info div {
-  width: 30%;
-  margin: 0 60px;
+  flex: 1 1 33%;
+  /* width: 30%; */
+  margin: 0 70px;
 }
 .contact-info h4 {
   padding: 4px 0;
@@ -597,6 +601,7 @@ img:hover {
   .banner-img div {
     flex: 1 1 400px;
     width: 80%;
+    /* height: auto; */
     margin: auto;
     margin-bottom: 20px;
   }
@@ -605,6 +610,11 @@ img:hover {
     border-radius: none;
     object-fit: cover;
   }
+  .banner-img img:hover {
+    border: 1px solid black;
+    box-shadow: 0px 0px 4px 1px gray;
+  }
+
   .div1 img,
   .div2 img,
   .div3 img,
@@ -622,8 +632,16 @@ img:hover {
     font-size: 34px;
   }
   .user-box {
-    width: 60%;
+    width: 50%;
     margin: auto;
+    padding: 20px;
+  }
+  .user-box h3 {
+    font-size: 22px;
+  }
+  .user-box p {
+    font-size: 15px;
+    font-weight: normal;
   }
 
   .service-process div:last-child {
@@ -634,7 +652,8 @@ img:hover {
     flex-grow: 0;
   }
   .contact-info div {
-    flex: 1;
+    flex: 1 1 30%;
+    margin: 0 90px;
   }
   .footer-info {
     padding: 30px;
@@ -651,6 +670,7 @@ img:hover {
     display: none;
   }
   .banner-title {
+    display: block;
     text-align: center;
   }
   .about-container {
@@ -669,6 +689,20 @@ img:hover {
   .about-status p {
     padding-top: 30px;
   }
+  .user-menu {
+    width: 100%;
+    padding: 0;
+  }
+  .user-box {
+    margin: auto;
+  }
+  .user-box h3 {
+    font-size: 22px;
+  }
+  .user-box p {
+    font-size: 15px;
+    font-weight: normal;
+  }
   .menu-content {
     width: 96%;
     margin: auto;
@@ -680,15 +714,29 @@ img:hover {
     width: 70%;
   }
   .user-info-container {
-    padding: 40px;
+    padding: 0 30px;
+    margin: 2rem 0;
   }
-  .user-greeting p {
+
+  .user-info {
+    display: flex;
+    width: 97%;
+    margin: auto;
+    margin-top: 1.2rem;
+  }
+  .user-info * {
+    color: rgb(94, 93, 93);
+  }
+  .user-info i {
+    font-size: 25px;
+    width: 15%;
+    padding-right: 15px;
+    margin: auto;
+  }
+  .user-info p {
     width: 80%;
-    margin: 0 40px;
   }
-  /* .user-info {
-    text-align: center;
-  } */
+
   .service-info * {
     text-align: center;
     margin: auto;
@@ -710,51 +758,104 @@ img:hover {
   .service-information {
     margin: 0 25px;
   }
+  .contact-info div {
+    flex: 1 1 35%;
+
+    /* width: 30%; */
+    margin: 0 45px;
+  }
+  .contact-info div:first-child {
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 576px) {
+  .about-container {
+    padding: 0 40px;
+  }
   nav {
-    padding: 10px;
+    padding: 0 15px;
   }
   .nav-info p:first-child {
     display: none;
   }
+  .nav-info p:last-child {
+    margin: 0px;
+  }
+  .banner-title {
+    padding: 10px 0;
+    margin: 15px;
+  }
   .banner-img div {
-    flex: 1 1 350px;
+    width: 96%;
+    margin: 7px auto;
+    /* height: auto; */
+  }
+  .banner-img img {
+    width: 100%;
+    height: 100%;
   }
   .about-status {
     width: 90%;
   }
-
+  .user-greeting p {
+    margin: 0 30px;
+    width: 86%;
+  }
+  .service-hightlight {
+    margin: 0px 30px;
+  }
+  .service-icon {
+    text-align: center;
+    margin: 0 10px;
+    border-bottom: 1px solid var(--gray-color);
+  }
+  .service-img {
+    margin: 10px 0;
+  }
+  .contact-location {
+    padding: 30px;
+  }
+  .menu-info {
+    padding: 0 20px;
+  }
+  .menu-container {
+    padding: 0 20px;
+  }
+  .menu-content div h4 {
+    line-height: 1.2rem;
+    font-size: 18px;
+  }
+  .menu-content div p {
+    font-size: 15px;
+    margin-bottom: 15px;
+    margin-top: -3px;
+  }
   .menu-content {
     width: 100%;
   }
-  .user-box {
-    width: 90%;
-  }
-  .user-box h3 {
-    font-size: 23px;
-  }
-  .user-info i {
-    display: none;
-  }
-  .user-info p:before {
-    content: "\2714";
-    padding-right: 6px;
-  }
+  .menu-content i {
+    font-size: 34px;
+    padding: 0 10px;
+    color: #292929ce;
+    width: 0px;
+    margin-right: 50px;
 
-  .contact-info {
-    display: block;
-  }
-  .contact-info div {
-    width: 100%;
-  }
-  .contact-info div:first-child {
-    margin-bottom: 50px;
-  }
-  /* .footer-info {
-    padding-right: 0px;
-  } */
-  .footer-info div:first-child a {
-    display: block;
+    .user-box {
+      width: 90%;
+    }
+    .user-box h3 {
+      font-size: 23px;
+    }
+    .user-info i {
+      display: none;
+    }
+    .user-info p:before {
+      content: "\2714";
+      padding-right: 6px;
+    }
+
+    .footer-info div:first-child a {
+      display: block;
+    }
   }
 }
